@@ -12,11 +12,11 @@ dir_path_content = "./content"
 template_path = "./template.html"
 
 basepath = "/"
-if sys.argv[0]:
-    basepath = sys.argv[0]
+if len(sys.argv) > 1:
+    basepath = sys.argv[1]
 
 def main():
-    
+    print(f"BASEPATH: {basepath}")
     
     print("Deleting public directory...")
     if os.path.exists(dir_path_docs):
